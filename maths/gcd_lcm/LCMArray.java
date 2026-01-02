@@ -10,10 +10,10 @@ public class LCMArray {
     }
 
     public static int lcmOfArray(int[] arr) {
-        int result = 1;
+        int result = 1; //1
         for(int n : arr) {
             result = lcm(result, n);
-            if (result == 0) {
+            if (result == 0) { //if any lcm is 0 whole lcm is 0
                 return 0;
             }
         }
