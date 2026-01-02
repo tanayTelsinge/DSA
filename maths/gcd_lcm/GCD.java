@@ -54,9 +54,13 @@ public class GCD {
             return gcdv2(b, a - b);
     }
 
+    //Euclidean Algorithm, 
+    //% mathematically, we need greater num / smaller num, but % handles it.
+    //Also for zero case, if we do a == 0 return b / by zero exception.
+    // for GCD, 0 , 10, 30, then gcd is 10 but for lcm if any 1 is zero then all 0.
     public static int gcd(int a, int b) {
         if (b == 0)
-            return b;
+            return a;
         return gcd(b, a % b);
     }
 }
