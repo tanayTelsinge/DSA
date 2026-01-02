@@ -24,7 +24,7 @@ public class LCMArray {
         if (a == 0 || b == 0) {
             return 0;
         }
-        return (a / gcd(a, b)) * b;
+        return (a / gcd(a, b)) * b; // a * b / gcd but as a * b might overflow for int, hence 
     }
 
     public static int gcd(int a, int b) {
