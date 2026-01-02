@@ -1,0 +1,36 @@
+DSA – Math / Number Theory Syllabus
+
+1. GCD / LCM
+   - Euclidean Algorithm (subtraction & modulo)
+   - Iterative & recursive implementations
+   - GCD / LCM of multiple numbers (arrays)
+
+2. Prime Numbers
+   - Prime check (optimized up to √n)
+   - Sieve of Eratosthenes
+   - Counting primes up to N
+   - Prime factorization
+
+3. Modular Arithmetic
+   - Modular addition, subtraction, multiplication
+   - Modular exponentiation
+   - Handling large numbers / preventing overflow
+
+4. Binary / Fast Exponentiation
+   - Recursive & iterative binary exponentiation
+   - Exponentiation under modulo
+
+5. Factorials & Combinatorics
+   - Factorials (normal & modulo)
+   - nCr (combinations)
+   - Pascal’s triangle
+
+6. Bitwise Math Tricks
+   - Power of 2 check (n & (n-1) == 0)
+   - Odd / even checks
+   - Other bit tricks for optimization
+
+7. Advanced Number Theory (Optional / High-Level)
+   - Extended Euclidean Algorithm (modular inverse)
+   - Chinese Remainder Theorem (CRT)
+   - Coprime checks
