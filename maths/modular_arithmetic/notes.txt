@@ -1,0 +1,45 @@
+What to know?
+Why modulo is needed
+- We apply modulo after every operation to keep 
+numbers within int/long limits and prevent overflow.
+
+Rules: for any number a & b and modulo number M
+(a + b) % M = ((a % M) + (b % M)) % M
+(a - b) % M = ((a % M) - (b % M) + M) % M
+(a * b) % M = ((a % M) * (b % M)) % M
+(a^b) % M   → use binary exponentiation
+
+Modular addition
+(a + b) % M = ((a % M) + (b % M)) % M
+
+Modular subtraction
+eg. (3 - 5) % 7 = -2 ❌
+Correction : 
+long sub = (a % M - b % M + M) % M;
+
+Modular multiplication (overflow issue)
+(a * b) % M   // may overflow
+long mul = ((a % M) * (b % M)) % M;
+
+
+Modular exponentiation (fast power)
+- 2 ^ 13 , too slow + overflow.
+- instead of multiplying 2 13 times, we square no and reduce power by half.
+
+a^13 = a * a^12
+a^12 = (a^6)^2
+a^6  = (a^3)^2
+
+eg. 2^13
+
+2^13 = 2^8 * 2^4 * 2^1
+
+2^1 = 2
+2^2 = 4
+2^4 = 16
+2^8 = 256
+
+256 * 16 * 2 => answer.
+
+Large numbers handling rules
+
