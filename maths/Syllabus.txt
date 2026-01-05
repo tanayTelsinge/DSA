@@ -2,7 +2,6 @@ DSA – Math / Number Theory Syllabus
 
 1. GCD / LCM
    - Euclidean Algorithm (subtraction & modulo)
-   - Iterative & recursive implementations
    - GCD / LCM of multiple numbers (arrays)
 
 2. Prime Numbers

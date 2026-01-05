@@ -1,0 +1,13 @@
+- Prime no -> has only two divisors 1 & itself. eg. 2, 3, 5, 7, 23 (Note : 1 is not prime)
+- Naive check -> check divisibility from 1 to n-1, log(n) too slow.
+- Optimization -> if n has factor greater than root(n), then it is factor of root n.
+
+- Q? Why do we check till root n?
+- n = a * b (a and b are factors).
+-Any composite number must have at least one factor less 
+than or equal to √n, so checking beyond that is unnecessary.
+
+- Now isPrime(n), what if we need to check if 10^6 is prime?
+- heavy computation log(n * root n), so sieve of Eratosthenes comes into picture.
+- FAANG optimization.
+- if a is prime, mark all its multiples non-prime.

@@ -1,5 +1,6 @@
 package gcd_lcm;
 
+//tc - gcd and lcm are 0(log n), for array based lcm/gcd its 0(n)
 public class LCMArray {
     
     public static void main(String[] args) {
