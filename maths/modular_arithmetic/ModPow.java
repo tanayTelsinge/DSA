@@ -6,7 +6,7 @@ public class ModPow {
         System.out.println(binPow(2, 13, 1_000_000_007));
     }
 
-    // iterative - sc big o (log power)
+    // iterative - sc big o (log power), tc big o (log power)
     static long binPow(long n, long power, long mod) {
         long result = 1;
         n = n % mod;
