@@ -19,7 +19,7 @@ DSA – Math / Number Theory Syllabus
    - Recursive & iterative binary exponentiation
    - Exponentiation under modulo
 
-5. Factorials & Combinatorics
+5. Factorials & Combinatorics (optional, leaving for now)
    - Factorials (normal & modulo)
    - nCr (combinations)
    - Pascal’s triangle

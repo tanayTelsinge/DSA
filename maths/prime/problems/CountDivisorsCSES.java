@@ -1,4 +1,4 @@
-package prime;
+package prime.problems;
 
 import java.io.BufferedReader;
 import java.io.IOException;
