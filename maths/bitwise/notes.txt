@@ -1,0 +1,70 @@
+Bit & Set Bit
+Bit = 0 or 1
+Set bit = bit with value 1
+Binary of 13 → 1101 → set bits = 3
+
+Use of set bit operations - to check or toggle feature enable / disable. 
+
+Tricks:
+Odd / Even
+n & 1
+
+Power of two
+n > 0 && (n & (n - 1)) == 0
+
+** n & (n - 1) is used to flip rightmost bit
+eg. i = 8, (1000). i - 1 = 7 (0111).
+res = i & (i - 1) => 0000
+
+eg. i = 7 (0111), i - 1 = 6 (0110)
+res = i & (i - 1) => 0110
+
+Its commonly used to 
+- counting set bits (Brian Kernighan's Algo)
+- removing lowest set bit
+- isolate rightmost bit
+
+Remove lowest set bit
+n = n & (n - 1)
+
+Isolate lowest set bit
+n & (-n)
+
+Kth bit operations:
+k-th Bit (0-based)
+
+Mask
+1 << k
+
+Check
+(n & (1 << k)) != 0
+
+Set
+n |= (1 << k)
+
+Clear
+n &= ~(1 << k)
+
+Toggle
+n ^= (1 << k)
+
+- Count Set bits
+while (n != 0) {
+    n &= (n - 1);
+    count++;
+}
+
+XOR - used to remove duplicates 
+XOR Properties
+a ^ a = 0
+a ^ 0 = a
+
+Subsets using bitmask (adv leaving for now)
+
+LC problems:
+1	136. Single Number	XOR cancels duplicates
+2	191. Number of 1 Bits	Count set bits
+3	231. Power of Two	n & (n-1) trick
+4	338. Counting Bits	DP + bit count
+5	268. Missing Number	XOR + math
+6	190. Reverse Bits	Bit manipulation basics
