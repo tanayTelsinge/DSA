@@ -3,7 +3,25 @@ package prime.problems;
 import java.util.Scanner;
 
 public class UglyNumberLC {
-    
+    //An ugly number is a positive integer which does not have a prime factor other than 2, 3, and 5.
+
+    /*
+    Example 1:
+
+Input: n = 6
+Output: true
+Explanation: 6 = 2 × 3
+Example 2:
+
+Input: n = 1
+Output: true
+Explanation: 1 has no prime factors.
+Example 3:
+
+Input: n = 14
+Output: false
+Explanation: 14 is not ugly since it includes the prime factor 7.
+ */
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
 
@@ -16,41 +34,16 @@ public class UglyNumberLC {
     public static int MOD = 1_000_000_007;
     public static int MAX = Integer.MAX_VALUE % MOD;
 
-
-    public static boolean isUgly(int n1) {
-        //if (n <= 10) return true;
-        int n = n1 % MOD;
-        int[] spf = new int[MAX];
-        sieve(spf);
-
-        return fact(n, spf);
-    }
-
-    public static boolean fact(int n, int[] spf) {
-        while (n > 1) {
-                int prime = spf[n];
-                if (prime > 5) return false;
-                while (n % prime == 0) {
-                    n /= prime;
-                }
-        }
-        return true;
-    }
-
-    public static void sieve(int[] spf) {
-
-        for(int i = 0; i < spf.length; i++) {
-            spf[i] = i;
-        }
-
-        for(int i = 2; i * i < spf.length; i++) {
-            if (spf[i] == i) {
-                for(int j = i * i; j < spf.length; j+=i) {
-                    if (spf[j] == j) {
-                        spf[j] = i;
-                    }
-                }
+    public static boolean isUgly(int n) {
+        int[] primes = { 2, 3, 5 };
+        if (n < 1)
+            return false;
+        for (int i = 0; i < primes.length; i++) {
+            while (n % primes[i] == 0) {
+                n /= primes[i];
             }
         }
+
+        return n <= 1 ? true : false;
     }
 }

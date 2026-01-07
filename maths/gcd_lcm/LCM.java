@@ -20,6 +20,8 @@ public class LCM {
         int ans = lcm(a, b);
 
         System.out.println(ans);
+
+        pw.close();
     }
 
     public static int gcd(int a, int b) {
@@ -33,6 +35,7 @@ public class LCM {
         return product / gcd(a, b);
     }
 
+    //to avoid overflow we first divide a / gcd
     public static int lcm(int a, int b) {
         if (a == 0 || b == 0) { //
             return 0;
