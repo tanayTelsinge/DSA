@@ -1,24 +1,23 @@
 package array.problems;
 
-import java.math.BigInteger;
 import java.util.PriorityQueue;
 
 public class ThirdMaxNumber {
     
     public static int thirdMax(int[] nums) {
 
-        PriorityQueue<BigInteger> q = new PriorityQueue<BigInteger>((a,b) -> b.intValue() - a.intValue());
+        PriorityQueue<Integer> q = new PriorityQueue<Integer>((a,b) -> Integer.compare(b, a));
 
         for(int num : nums) {
-            if (!q.contains(num)) q.add(BigInteger.valueOf(num));
+            if (!q.contains(num)) q.add(num);
         }
 
-        int max = q.poll().intValue();
+        int max = q.poll();
 
         if (!q.isEmpty()) {
             q.poll();
         }
-        return q.isEmpty() ? max : q.poll().intValue();
+        return q.isEmpty() ? max : q.poll();
     }
 
     public static void main(String[] args) {
