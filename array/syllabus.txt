@@ -1,0 +1,265 @@
+GLOBAL RULES (NON-NEGOTIABLE)
+
+First write brute force (even if you don’t code it)
+State invariant before coding
+Mention time + space complexity aloud
+Handle empty, size=1, all same values
+No guessing pointer moves
+Java only
+If explanation is weak → redo problem
+
+DAY 1 – ARRAY FUNDAMENTALS & TRAVERSAL
+Goal: kill off-by-one and logic bugs forever
+
+Core Concepts (must verbalize)
+Traversal patterns
+full scan
+look-back (i-1)
+look-ahead (i+1)
+Index boundaries
+why loop starts at 0 / 1
+why loop ends at n / n-1
+State variables
+count, max, flag, result index
+In-place vs extra space
+what changes, what remains intact
+Edge cases
+empty array
+single element
+all zeros / all same values
+
+Problems (order matters)
+
+LC 485 – Max Consecutive Ones
+
+LC 1295 – Even Number of Digits
+
+LC 414 – Third Maximum
+
+LC 905 – Sort Array by Parity
+
+LC 283 – Move Zeroes (basic)
+
+Mandatory Explanation
+
+Why loop bounds are correct
+
+When exactly state variable updates
+
+Why edge cases do not break logic
+
+DAY 2 – TWO POINTERS (SAME DIRECTION)
+
+Goal: in-place overwrite mastery
+
+Core Concepts
+
+Slow / fast pointer meaning
+
+Valid region
+
+[0…slow) is always correct
+
+Safe overwriting
+
+fast always reads before slow writes
+
+Why array order may or may not matter
+
+Problems
+
+LC 27 – Remove Element
+
+LC 26 – Remove Duplicates (I)
+
+LC 80 – Remove Duplicates (II)
+
+LC 283 – Move Zeroes (strict in-place)
+
+LC 75 – Sort Colors
+
+Mandatory Explanation
+
+What slow pointer represents
+
+Why data is never lost
+
+Final array length meaning
+
+DAY 3 – TWO POINTERS (OPPOSITE DIRECTION)
+
+Goal: logical shrinking, no brute force
+
+Core Concepts
+
+Left / right pointer roles
+
+Sorted array leverage
+
+Greedy decision proof
+
+When to stop
+
+Problems
+
+LC 167 – Two Sum II
+
+LC 977 – Squares of Sorted Array
+
+LC 344 – Reverse String
+
+LC 11 – Container With Most Water
+
+Mandatory Explanation
+
+Why pointer movement is correct
+
+Why greedy step is safe
+
+Why no better answer is skipped
+
+DAY 4 – SUBARRAY + FIXED SLIDING WINDOW
+
+Goal: correct window thinking
+
+Core Concepts
+
+Subarray vs subsequence
+
+Why brute force is O(n²)
+
+Fixed window invariant
+
+Add right, remove left
+
+Problems
+
+LC 643 – Max Average Subarray I
+
+LC 1343 – Subarrays ≥ Threshold
+
+LC 438 – Find All Anagrams
+
+array frequency only
+
+no hashmap shortcut first
+
+Mandatory Explanation
+
+Window size never changes
+
+Exact add/remove steps
+
+Why window is valid at each step
+
+DAY 5 – VARIABLE SLIDING WINDOW (FAANG CORE)
+
+Goal: hardest array pattern, must click
+
+Core Concepts
+
+Expand window
+
+Shrink window
+
+Window invariant
+
+At most vs exactly logic
+
+Problems
+
+LC 209 – Min Size Subarray Sum
+
+LC 1004 – Max Consecutive Ones III
+
+LC 904 – Fruit Into Baskets
+
+LC 3 – Longest Substring Without Repeat
+
+array first
+
+hashmap only if forced
+
+Mandatory Explanation
+
+When to expand
+
+When to shrink
+
+Why total work is O(n), not O(n²)
+
+DAY 6 – PREFIX SUM + KADANE
+
+Goal: power tools, must be instant
+
+Core Concepts
+
+Prefix sum definition
+
+Range sum logic
+
+Prefix sum + hashmap
+
+Kadane: local vs global max
+
+Problems
+
+LC 303 – Range Sum Query
+
+LC 560 – Subarray Sum = K
+
+LC 974 – Subarrays Divisible by K
+
+LC 53 – Maximum Subarray
+
+Mandatory Identity (instant recall)
+prefix[j] - prefix[i] = k
+
+
+If you hesitate → repeat day.
+
+DAY 7 – SORTING + COMBINATION + REVISION
+
+Goal: interview simulation
+
+Core Concepts
+
+Sorting trade-offs
+
+Two pointers after sort
+
+Interval merging logic
+
+In-place merge logic
+
+Problems
+
+LC 1 – Two Sum
+
+LC 15 – 3Sum
+
+LC 56 – Merge Intervals
+
+LC 88 – Merge Sorted Array
+
+Revision Drill
+
+Re-solve LC 209 or LC 560
+
+No notes
+
+Explain aloud
+
+Write clean Java
+
+COMPLETION STANDARD (HONEST CHECK)
+
+You are array-ready only if:
+
+Medium ≤ 45 minutes
+
+No panic on edge cases
+
+Explanation is structured
+
+Java code is readable and tight

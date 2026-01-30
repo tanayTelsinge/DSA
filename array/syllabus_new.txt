@@ -1,0 +1,28 @@
+Array
+
+1. Array Traversals and concept of Invariant
+- Full scan, look back (i-1), look ahead (i + 1) traversal.
+- Invariant - condition that is true during every iteration of loop.
+eg. max - if processing in loop, max should hold max value, at each iteration.
+init - max = Integer.MIN_VALUE, loop keep track of max, end max of array.
+eg. count - count init 0, maintains count, reset if stale.
+int count = 0;
+int ans = 0;
+
+for (int i = 0; i < n; i++) {
+    if (arr[i] == 1) {
+        count++;
+        ans = Math.max(ans, count);
+    } else {
+        count = 0;
+    }
+}
+
+- Checklist 
+What traversal?
+Do I use i-1 or i+1?
+Loop start?
+Loop end?
+State init correct?
+Empty array handled?
+

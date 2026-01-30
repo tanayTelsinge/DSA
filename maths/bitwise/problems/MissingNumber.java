@@ -28,6 +28,10 @@ public class MissingNumber {
         return sum;
     }
 
+    /*
+    All numbers from 0 to n are XORed once, the array elements are XORed once, 
+    so every number cancels itself except the missing one, which appears only once and remains
+     */
      public static int missingNumberXOR(int[] nums) {
         int n = nums.length;
 
